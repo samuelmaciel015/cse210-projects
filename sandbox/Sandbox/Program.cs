@@ -4,12 +4,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World!!!");
-        Console.WriteLine("This is in C#.");
+        int x = 5;
+        int y = 2;
 
-        Console.Write("Whats your favorite color? ");
-        string color = Console.ReadLine();
-        Console.WriteLine($"Your color is {color}");
+        if (x > y)
+        {
+            Console.WriteLine("Greater");
+        }
+        else if (x < y)
+        {
+            Console.WriteLine("Less");
+        }
+        else
+        {
+            Console.WriteLine("Equal");
+        }
 
     }
 }
