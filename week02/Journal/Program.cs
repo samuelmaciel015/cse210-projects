@@ -10,7 +10,7 @@ class Program
         Console.WriteLine("Hello World! This is the Journal Project.");
         string choice;
         Journal journal = new Journal();
-        PromptGenerator prompt = new PromptGenerator();
+        
         DateTime theCurrentTime = DateTime.Now;
         string dateText = theCurrentTime.ToShortDateString();
 
@@ -28,6 +28,7 @@ class Program
 
             if (choice == "1")
             {
+                PromptGenerator prompt = new PromptGenerator();
                 string promptCreated = prompt.GetRandomPrompt();
                 Console.WriteLine(promptCreated);
                 Console.Write("> ");
