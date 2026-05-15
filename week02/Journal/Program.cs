@@ -5,7 +5,6 @@ class Program
     static void Main(string[] args)
     {
         string choice;
-        Entry entry = new Entry();
         Journal journal = new Journal();
 
         Console.WriteLine("Welcome to the Jorunal Program!");
@@ -18,7 +17,7 @@ class Program
             choice = Console.ReadLine();
 
             if (choice == "1")
-            {                
+            {
                 //generate prompt with the random number
                 PromptGenerator prompt = new PromptGenerator();
                 string newPrompt = prompt.GetRandomPrompt();
@@ -29,6 +28,7 @@ class Program
                 string answer = Console.ReadLine();
 
                 //add to the entry
+                Entry entry = new Entry();
                 entry._promptText = newPrompt;
                 entry._entryText = answer;
                 journal.AddEntry(entry);
@@ -50,6 +50,10 @@ class Program
                 string name = Console.ReadLine();
 
                 journal.SaveToFile(name);
+            }
+            else if (choice == "5")
+            {
+                Console.WriteLine("Goodbye!");
             }
             else
             {
