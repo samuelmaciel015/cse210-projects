@@ -1,5 +1,3 @@
-using System.IO.Enumeration;
-
 public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
@@ -35,6 +33,11 @@ public class Journal
         string fileName = Console.ReadLine();
 
         string[] lines = System.IO.File.ReadAllLines(fileName);
+
+        if (lines.Length != _entries.Count)
+        {
+            
+        }
 
         foreach (string line in lines)
         {
