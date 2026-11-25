@@ -23,11 +23,17 @@ public class Video
         Console.WriteLine("VIDEO INFORMATION");
         Console.WriteLine($"Title: {_title} --- Length (in Seconds): {_lengthInSeconds}");
         Console.WriteLine($"Author: {_author}\n");
+        Console.WriteLine($"There is {GetNumberOfComments()} comment(s)");
         Console.WriteLine("Comments:");
         foreach (Comment item in _comments)
         {
             item.GetComment();
         }
+    }
+
+    public int GetNumberOfComments()
+    {
+        return _comments.Count;
     }
 
 }

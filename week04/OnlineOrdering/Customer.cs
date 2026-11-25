@@ -1,24 +1,24 @@
 public class Customer {
     //member variables
-    private string _name;
-    private Address _address;
+    private string _customerName;
+    private Address _customerAddress;
 
     //constructor
     public Customer(string name, Address address) {
-        _name=name;
-        _address=address;
+        _customerName = name;
+        _customerAddress = address;
     }
 
     //member methods
     public bool LivesInUSA() {
-        return _address.IsInUSA();
+        return _customerAddress.IsInUSA();
     }
 
     public string GetName() {
-        return _name;
+        return _customerName;
     }
 
     public Address GetAddress() {
-        return _address;
+        return _customerAddress;
     }
 }
